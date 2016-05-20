@@ -1,0 +1,8 @@
+docs/
+dist/
+.DS_Store
+coverage/
+node_modules/
+.tmp
+npm-debug.log
+phantomjsdriver.log
