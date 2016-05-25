@@ -1,11 +1,5 @@
 'use strict'
 
-import { MyComponent } from './source/my-component.js'
+import { RocketripTest } from './source/rocketrip-test.js'
 
-new MyComponent({
-  my_option: false,
-  some_data: [{
-    title: 'foo',
-    url: '/bar'
-  }]
-}).render()
+(new RocketripTest()).render()

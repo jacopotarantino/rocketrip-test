@@ -38,5 +38,4 @@ describe('MyComponent', () => {
       expect(node.innerHTML).toContain('<ul class="list-horizontal"')
     })
   })
-
 })

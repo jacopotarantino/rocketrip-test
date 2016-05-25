@@ -1,0 +1,63 @@
+$black: #333333
+$offwhite: #f9f9f9
+$white: #ffffff
+$light-blue: #e0e0ff
+
+$hour-height: 3rem
+$small-radius: 3px
+
+*
+  box-sizing: border-box
+  font-family: 'Helvetica Neue', sans-serif
+
+html, body
+  font-size: 14px
+  margin: 0
+  padding: 0
+
+.calendar-container
+  background: $offwhite
+  padding: 1rem
+
+.week
+  display: flex
+  border: 1px solid $black
+
+.day
+  position: relative
+  flex: 1 0
+  padding: 0.5rem
+
+  & + .day
+    border-left: 1px solid $black
+
+.day-name
+  margin: 0 0 1rem
+
+.hour
+  height: $hour-height
+
+.event
+  position: absolute
+  left: 0
+  right: 0
+  background: $light-blue
+  border: 1px solid $white
+  border-radius: $small-radius
+
+  &:hover
+    z-index: 10
+
+  & + .event
+    left: 15%
+
+  &.one
+    height: $hour-height * 1
+  &.two
+    height: $hour-height * 2
+  &.three
+    height: $hour-height * 3
+  &.four
+    height: $hour-height * 4
+  &.five
+    height: $hour-height * 5
