@@ -1,6 +1,6 @@
 # rocketrip-test
 
-This creates a new rocketrip-test
+This is the repo for my rocketrip code test. See the instructions below for all uses.
 
 ![dependency stability](https://david-dm.org/Jack/rocketrip-test.svg)
 
@@ -33,7 +33,7 @@ This starts a browsersync server running on `localhost:3000`. It serves files ou
 
 Run the build to generate dist files and use them as you please.
 
-* `npm build`
+* `npm run build`
 
 ## Contributing
 
