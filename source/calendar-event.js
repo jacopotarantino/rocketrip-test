@@ -20,7 +20,7 @@ export class CalendarEvent extends UIComponent {
     // set the node height to be equal to the length of the event
     // note: uses a magic number that's supposed to be equal to that in the styles
     event_markup.style.height = 3 * this.length_in_hours + 'rem'
-    event_markup.style.top = 3 + this.starting_offset_in_hours + 'rem'
+    event_markup.style.top = 3 * this.starting_offset_in_hours + 'rem'
     this.node = event_markup
   }
 
@@ -48,9 +48,9 @@ export class CalendarEvent extends UIComponent {
   // convenience method to get the fancy user-friendly time.
   get formatted_time () {
     let start = new Date(this.event_data.start_date)
-    start = start.getHours() + (start.getHours - 12 ? 'am' : 'pm')
+    start = start.getHours() + ((start.getHours() - 12) < 0 ? 'am' : 'pm')
     let end = new Date(this.event_data.end_date)
-    end = end.getHours() + (end.getHours - 12 ? 'am' : 'pm')
+    end = end.getHours() + ((end.getHours() - 12) < 0 ? 'am' : 'pm')
 
     return start + ' - ' + end
   }
