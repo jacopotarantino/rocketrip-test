@@ -2,7 +2,11 @@
 
 This is the repo for my rocketrip code test. See the instructions below for all uses.
 
-![dependency stability](https://david-dm.org/Jack/rocketrip-test.svg)
+Notes:
+
+* About 4 hours of effort
+* No external runtime dependencies
+* Does not handle timezones
 
 ## Prerequisites
 
@@ -21,7 +25,9 @@ This is the repo for my rocketrip code test. See the instructions below for all 
 
 This will run standard, karma, protractor, nsp, and jsdoc. Webpack uses sass, jade, and babel to wire up your components/requires. jsdoc outputs a compiled static site to `/docs`. Babel transpile the ES6 in `index.js` to ES5 in `dist/index.js` and creates a sourcemap.
 
-* `npm test`
+* `npm run unit`
+
+(You can also run `npm test` for the full test suite but this isn't recommended for this project.)
 
 ## Run a watcher for development
 

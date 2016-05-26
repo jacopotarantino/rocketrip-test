@@ -1,6 +1,7 @@
 'use strict'
 
 import { RocketripTest } from './rocketrip-test.js'
+import { APIService } from './api-service.js'
 
 describe('Rocketrip Code Test', () => {
   let calendar
@@ -40,8 +41,12 @@ describe('Rocketrip Code Test', () => {
     expect(document.querySelectorAll('.event').length).toBe(3)
   })
 
-  it('gets events from the "API" asynchronously', () => {
-    expect(true).toBe(false)
+  it('gets events from the "API" asynchronously', (done) => {
+    let promise = APIService.get_events()
+    promise.then(function (events) {
+      expect(events.length).toBe(3)
+      done()
+    })    
   })
 
   it('Show events with different durations', () => {
